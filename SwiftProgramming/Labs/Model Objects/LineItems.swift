@@ -43,13 +43,13 @@ extension Array where Element == LineItem
     func formattedLineItems() -> [(String, Double)] {
         var formattedItems: [(String, Double)] = []
         for item in self {
-            formattedItems.append(formatted(item: item))
+            formattedItems.append(Labs.formatted(item: item))
         }
         return formattedItems
     }
     
     func formattedLineItems2() -> [(String, Double)] {
-        return map { formatted(item: $0) }
+        return map { Labs.formatted(item: $0) }
     }
 }
 

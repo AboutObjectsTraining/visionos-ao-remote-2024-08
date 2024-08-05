@@ -1,6 +1,7 @@
 // Copyright (C) 2015 About Objects, Inc. All Rights Reserved.
 // See LICENSE.txt for this example's licensing information.
 //
+import Foundation
 
 class Animal {
     var isPet: Bool = false
@@ -36,8 +37,6 @@ struct Cat: Codable {
     var json: Data {
         let cat = Cat(name: "Tiger", age: 2)
         let data = try! JSONEncoder().encode(cat)
-        let cat2 = try! JSONDecoder().decode(Cat.self, from: data)
-        
         return data
     }
 }
