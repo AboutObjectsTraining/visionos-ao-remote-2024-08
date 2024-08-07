@@ -6,17 +6,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Bindable var viewModel: CatalogsViewModel
     
     var body: some View {
-        TabView {
-            BooksBrowser()
-                .tabItem {
-                    Label("Books", systemImage: "books.vertical.fill" )
-                }
-            SpatialObjectsBrowser()
-                .tabItem {
-                    Label("3D Models", systemImage: "rotate.3d.fill")
-                }
+        NavigationStack {
+            TabView(selection: $viewModel.selectedTab) {
+                BooksBrowser(viewModel: viewModel)
+                    .tag(Tab.books)
+                    .tabItem {
+                        Label(Tab.books.rawValue, systemImage: "books.vertical.fill" )
+                    }
+                    .onAppear {
+                        if !viewModel.hasBooks {
+                            Task {
+                                await viewModel.loadBooks()
+                            }
+                        }
+                    }
+                SpatialObjectsBrowser()
+                    .tag(Tab.objects)
+                    .tabItem {
+                        Label(Tab.objects.rawValue, systemImage: "rotate.3d.fill")
+                    }
+                SettingsBrowser()
+                    .tag(Tab.settings)
+                    .tabItem {
+                        Label(Tab.settings.rawValue, systemImage: "gear")
+                    }
+            }
+            .navigationTitle(
+                viewModel.selectedTab.rawValue
+            )
         }
     }
 }
@@ -35,13 +55,6 @@ struct EmptyContentMessage: View {
     }
 }
 
-struct BooksBrowser: View {
-    
-    var body: some View {
-        EmptyContentMessage(title: "No books.", message: "Tap the + button to add a book.")
-    }
-}
-
 struct SpatialObjectsBrowser: View {
     
     var body: some View {
@@ -49,9 +62,16 @@ struct SpatialObjectsBrowser: View {
     }
 }
 
+struct SettingsBrowser: View {
+    
+    var body: some View {
+        EmptyContentMessage(title: "No Settings", message: "This feature is coming soon!")
+    }
+}
+
 #Preview("Content View",
          windowStyle: .automatic,
          traits: .fixedLayout(width: 400, height: 600)) {
     
-    ContentView()
+    ContentView(viewModel: CatalogsViewModel())
 }
