@@ -13,6 +13,23 @@
 		B42514C22C63C842003A461A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42514C12C63C842003A461A /* Assets.xcassets */; };
 		B42514C52C63C842003A461A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42514C42C63C842003A461A /* Preview Assets.xcassets */; };
 		B42514D02C63C842003A461A /* CatalogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42514CF2C63C842003A461A /* CatalogsTests.swift */; };
+		B43D45C22C64163E00D70CB7 /* 1984.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45B12C64163E00D70CB7 /* 1984.jpg */; };
+		B43D45C32C64163E00D70CB7 /* Anna Karenina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45B22C64163E00D70CB7 /* Anna Karenina.jpg */; };
+		B43D45C42C64163E00D70CB7 /* Emma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45B32C64163E00D70CB7 /* Emma.jpg */; };
+		B43D45C52C64163E00D70CB7 /* Great Expectations.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45B42C64163E00D70CB7 /* Great Expectations.jpg */; };
+		B43D45C62C64163E00D70CB7 /* Julius Caesar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45B52C64163E00D70CB7 /* Julius Caesar.jpg */; };
+		B43D45C72C64163E00D70CB7 /* Much Ado About Nothing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45B62C64163E00D70CB7 /* Much Ado About Nothing.jpg */; };
+		B43D45C82C64163E00D70CB7 /* Pride and Prejudice.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45B72C64163E00D70CB7 /* Pride and Prejudice.jpg */; };
+		B43D45C92C64163E00D70CB7 /* Romeo and Juliet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45B82C64163E00D70CB7 /* Romeo and Juliet.jpg */; };
+		B43D45CA2C64163E00D70CB7 /* The Brothers Karamozov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45B92C64163E00D70CB7 /* The Brothers Karamozov.jpg */; };
+		B43D45CB2C64163E00D70CB7 /* The Iliad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45BA2C64163E00D70CB7 /* The Iliad.jpg */; };
+		B43D45CC2C64163E00D70CB7 /* The Odyssey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45BB2C64163E00D70CB7 /* The Odyssey.jpg */; };
+		B43D45CD2C64163E00D70CB7 /* The Possessed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45BC2C64163E00D70CB7 /* The Possessed.jpg */; };
+		B43D45CE2C64163E00D70CB7 /* The Time Machine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45BD2C64163E00D70CB7 /* The Time Machine.jpg */; };
+		B43D45CF2C64163E00D70CB7 /* Treasure Island.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45BE2C64163E00D70CB7 /* Treasure Island.jpg */; };
+		B43D45D02C64163E00D70CB7 /* War and Peace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45BF2C64163E00D70CB7 /* War and Peace.jpg */; };
+		B43D45D12C64163E00D70CB7 /* War of the Worlds.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B43D45C02C64163E00D70CB7 /* War of the Worlds.jpg */; };
+		B43D45D32C641E2300D70CB7 /* CompletionProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D45D22C641E2200D70CB7 /* CompletionProgressViewStyle.swift */; };
 		B473C71D2C63D72600426839 /* CatalogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473C71C2C63D72600426839 /* CatalogsViewModel.swift */; };
 		B473C7272C63F74200426839 /* ObjectCatalog.json in Resources */ = {isa = PBXBuildFile; fileRef = B473C7252C63F74200426839 /* ObjectCatalog.json */; };
 		B473C7282C63F74200426839 /* BookCatalog.json in Resources */ = {isa = PBXBuildFile; fileRef = B473C7262C63F74200426839 /* BookCatalog.json */; };
@@ -42,6 +59,23 @@
 		B42514C62C63C842003A461A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B42514CB2C63C842003A461A /* CatalogsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalogsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42514CF2C63C842003A461A /* CatalogsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsTests.swift; sourceTree = "<group>"; };
+		B43D45B12C64163E00D70CB7 /* 1984.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1984.jpg; sourceTree = "<group>"; };
+		B43D45B22C64163E00D70CB7 /* Anna Karenina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Anna Karenina.jpg"; sourceTree = "<group>"; };
+		B43D45B32C64163E00D70CB7 /* Emma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Emma.jpg; sourceTree = "<group>"; };
+		B43D45B42C64163E00D70CB7 /* Great Expectations.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Great Expectations.jpg"; sourceTree = "<group>"; };
+		B43D45B52C64163E00D70CB7 /* Julius Caesar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Julius Caesar.jpg"; sourceTree = "<group>"; };
+		B43D45B62C64163E00D70CB7 /* Much Ado About Nothing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Much Ado About Nothing.jpg"; sourceTree = "<group>"; };
+		B43D45B72C64163E00D70CB7 /* Pride and Prejudice.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pride and Prejudice.jpg"; sourceTree = "<group>"; };
+		B43D45B82C64163E00D70CB7 /* Romeo and Juliet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Romeo and Juliet.jpg"; sourceTree = "<group>"; };
+		B43D45B92C64163E00D70CB7 /* The Brothers Karamozov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Brothers Karamozov.jpg"; sourceTree = "<group>"; };
+		B43D45BA2C64163E00D70CB7 /* The Iliad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Iliad.jpg"; sourceTree = "<group>"; };
+		B43D45BB2C64163E00D70CB7 /* The Odyssey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Odyssey.jpg"; sourceTree = "<group>"; };
+		B43D45BC2C64163E00D70CB7 /* The Possessed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Possessed.jpg"; sourceTree = "<group>"; };
+		B43D45BD2C64163E00D70CB7 /* The Time Machine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Time Machine.jpg"; sourceTree = "<group>"; };
+		B43D45BE2C64163E00D70CB7 /* Treasure Island.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Treasure Island.jpg"; sourceTree = "<group>"; };
+		B43D45BF2C64163E00D70CB7 /* War and Peace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "War and Peace.jpg"; sourceTree = "<group>"; };
+		B43D45C02C64163E00D70CB7 /* War of the Worlds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "War of the Worlds.jpg"; sourceTree = "<group>"; };
+		B43D45D22C641E2200D70CB7 /* CompletionProgressViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletionProgressViewStyle.swift; sourceTree = "<group>"; };
 		B473C71C2C63D72600426839 /* CatalogsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsViewModel.swift; sourceTree = "<group>"; };
 		B473C7252C63F74200426839 /* ObjectCatalog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ObjectCatalog.json; sourceTree = "<group>"; };
 		B473C7262C63F74200426839 /* BookCatalog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BookCatalog.json; sourceTree = "<group>"; };
@@ -97,6 +131,7 @@
 				B42514BD2C63C834003A461A /* ContentView.swift */,
 				B473C72F2C640B5500426839 /* BooksBrowser.swift */,
 				B473C71C2C63D72600426839 /* CatalogsViewModel.swift */,
+				B43D45D22C641E2200D70CB7 /* CompletionProgressViewStyle.swift */,
 				B42514C12C63C842003A461A /* Assets.xcassets */,
 				B42514C62C63C842003A461A /* Info.plist */,
 				B42514C32C63C842003A461A /* Preview Content */,
@@ -128,11 +163,35 @@
 			path = CatalogsTests;
 			sourceTree = "<group>";
 		};
+		B43D45C12C64163E00D70CB7 /* Cover Images */ = {
+			isa = PBXGroup;
+			children = (
+				B43D45B12C64163E00D70CB7 /* 1984.jpg */,
+				B43D45B22C64163E00D70CB7 /* Anna Karenina.jpg */,
+				B43D45B32C64163E00D70CB7 /* Emma.jpg */,
+				B43D45B42C64163E00D70CB7 /* Great Expectations.jpg */,
+				B43D45B52C64163E00D70CB7 /* Julius Caesar.jpg */,
+				B43D45B62C64163E00D70CB7 /* Much Ado About Nothing.jpg */,
+				B43D45B72C64163E00D70CB7 /* Pride and Prejudice.jpg */,
+				B43D45B82C64163E00D70CB7 /* Romeo and Juliet.jpg */,
+				B43D45B92C64163E00D70CB7 /* The Brothers Karamozov.jpg */,
+				B43D45BA2C64163E00D70CB7 /* The Iliad.jpg */,
+				B43D45BB2C64163E00D70CB7 /* The Odyssey.jpg */,
+				B43D45BC2C64163E00D70CB7 /* The Possessed.jpg */,
+				B43D45BD2C64163E00D70CB7 /* The Time Machine.jpg */,
+				B43D45BE2C64163E00D70CB7 /* Treasure Island.jpg */,
+				B43D45BF2C64163E00D70CB7 /* War and Peace.jpg */,
+				B43D45C02C64163E00D70CB7 /* War of the Worlds.jpg */,
+			);
+			path = "Cover Images";
+			sourceTree = "<group>";
+		};
 		B473C7242C63F67C00426839 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B473C7262C63F74200426839 /* BookCatalog.json */,
 				B473C7252C63F74200426839 /* ObjectCatalog.json */,
+				B43D45C12C64163E00D70CB7 /* Cover Images */,
 				B473C7292C63F7D100426839 /* BookCatalog.swift */,
 				B473C72D2C64034C00426839 /* Book.swift */,
 				B473C72B2C63F8DC00426839 /* DataStore.swift */,
@@ -224,10 +283,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43D45C62C64163E00D70CB7 /* Julius Caesar.jpg in Resources */,
 				B42514C52C63C842003A461A /* Preview Assets.xcassets in Resources */,
 				B473C7272C63F74200426839 /* ObjectCatalog.json in Resources */,
+				B43D45C22C64163E00D70CB7 /* 1984.jpg in Resources */,
+				B43D45C82C64163E00D70CB7 /* Pride and Prejudice.jpg in Resources */,
+				B43D45CA2C64163E00D70CB7 /* The Brothers Karamozov.jpg in Resources */,
+				B43D45C72C64163E00D70CB7 /* Much Ado About Nothing.jpg in Resources */,
+				B43D45D12C64163E00D70CB7 /* War of the Worlds.jpg in Resources */,
+				B43D45C32C64163E00D70CB7 /* Anna Karenina.jpg in Resources */,
+				B43D45CE2C64163E00D70CB7 /* The Time Machine.jpg in Resources */,
 				B473C7282C63F74200426839 /* BookCatalog.json in Resources */,
+				B43D45CC2C64163E00D70CB7 /* The Odyssey.jpg in Resources */,
+				B43D45CD2C64163E00D70CB7 /* The Possessed.jpg in Resources */,
+				B43D45C42C64163E00D70CB7 /* Emma.jpg in Resources */,
+				B43D45D02C64163E00D70CB7 /* War and Peace.jpg in Resources */,
+				B43D45C92C64163E00D70CB7 /* Romeo and Juliet.jpg in Resources */,
+				B43D45CF2C64163E00D70CB7 /* Treasure Island.jpg in Resources */,
 				B42514C22C63C842003A461A /* Assets.xcassets in Resources */,
+				B43D45CB2C64163E00D70CB7 /* The Iliad.jpg in Resources */,
+				B43D45C52C64163E00D70CB7 /* Great Expectations.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +325,7 @@
 				B42514BC2C63C834003A461A /* CatalogsApp.swift in Sources */,
 				B473C72E2C64034C00426839 /* Book.swift in Sources */,
 				B473C72A2C63F7D100426839 /* BookCatalog.swift in Sources */,
+				B43D45D32C641E2300D70CB7 /* CompletionProgressViewStyle.swift in Sources */,
 				B473C72C2C63F8DC00426839 /* DataStore.swift in Sources */,
 				B473C71D2C63D72600426839 /* CatalogsViewModel.swift in Sources */,
 			);
