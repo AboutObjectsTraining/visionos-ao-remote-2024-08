@@ -9,15 +9,11 @@ struct CompletionProgressViewStyle: ProgressViewStyle {
         ZStack {
             if (configuration.percentComplete < 1) {
                 Circle()
+                    .stroke(configuration.color.opacity(0.3), style: configuration.strokeStyle)
+                Circle()
                     .trim(from: 0.0, to: CGFloat(configuration.percentComplete))
                     .stroke(configuration.color, style: configuration.strokeStyle)
                     .rotationEffect(.degrees(-90))
-                    .frame(width: 60)
-                    .background(
-                        Circle()
-                            .stroke(configuration.color.opacity(0.3), style: configuration.strokeStyle)
-                            .rotationEffect(.degrees(-90))
-                    )
                 Text(configuration.percentComplete, format: .percent)
                     .font(.caption)
             } else {
@@ -28,6 +24,7 @@ struct CompletionProgressViewStyle: ProgressViewStyle {
                     .padding(.horizontal, -6)
             }
         }
+        .frame(width: 60)
         .foregroundColor(configuration.color)
     }
 }

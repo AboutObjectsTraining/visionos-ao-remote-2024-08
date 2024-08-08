@@ -6,17 +6,38 @@
 import SwiftUI
 
 struct BooksBrowser: View {
-    let viewModel: CatalogsViewModel
+    @Bindable var viewModel: CatalogsViewModel
     
     var body: some View {
         Group {
             if !viewModel.hasBooks {
                 EmptyContentMessage(title: "No books.", message: "Tap the + button to add a book.")
             } else {
-                List(viewModel.bookCatalog.books) { book in
-                    BookCell(book: book)
+                List {
+                    ForEach(viewModel.bookCatalog.books) { book in
+                        NavigationLink {
+                            BookDetail(book: book)
+                        } label: {
+                            BookCell(book: book)
+                        }
+                    }
+                    .onDelete { offsets in
+                        viewModel.removeBooks(atOffsets: offsets)
+                    }
+                    .onMove { offsets, targetOffset in
+                        viewModel.moveBooks(atOffsets: offsets, toOffset: targetOffset)
+                    }
                 }
             }
+        }
+        .toolbar {
+            EditButton()
+            Button(action: { viewModel.beginAddingBook() },
+                   label: { Image(systemName: "plus") })
+        }
+        .sheet(isPresented: $viewModel.isAddingBook) {
+            AddBookView(addBook: viewModel.addBook(_:),
+                        cancel: viewModel.cancelAddBook)
         }
     }
 }
@@ -40,6 +61,7 @@ struct BookCell: View {
             Spacer()
             ProgressView(value: book.percentComplete)
                 .progressViewStyle(CompletionProgressViewStyle())
+                .padding(.trailing, 12)
         }
     }
 }
@@ -81,7 +103,7 @@ struct ThumbnailView: View {
         .glassBackgroundEffect()
 }
 
-#Preview("List", windowStyle: .automatic, traits: .fixedLayout(width: 400, height: 600)) {
+#Preview("List", windowStyle: .automatic, traits: .fixedLayout(width: 600, height: 600)) {
     
     let viewModel = CatalogsViewModel()
     

@@ -18,6 +18,8 @@ enum Tab: String {
     
     var selectedTab = Tab.books
     
+    var isAddingBook = false
+    
     var hasBooks: Bool {
         !bookCatalog.books.isEmpty
     }
@@ -25,6 +27,30 @@ enum Tab: String {
 
 // MARK: Actions
 extension CatalogsViewModel {
+    
+    func beginAddingBook() {
+        isAddingBook = true
+    }
+    
+    func addBook(_ book: Book) {
+        isAddingBook = false
+        bookCatalog.add(book: book)
+        // TODO: Save changes...
+    }
+    
+    func cancelAddBook() {
+        isAddingBook = false
+    }
+    
+    func removeBooks(atOffsets offsets: IndexSet) {
+        bookCatalog.remove(atOffsets: offsets)
+        // TODO: Save changes...
+    }
+    
+    func moveBooks(atOffsets offsets: IndexSet, toOffset offset: Int) {
+        bookCatalog.move(fromOffsets: offsets, toOffset: offset)
+        // TODO: Save changes...
+    }
     
     func loadBooks() async {
         do {

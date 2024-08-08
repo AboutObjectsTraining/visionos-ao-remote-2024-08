@@ -27,3 +27,20 @@ import Foundation
         self.books = books
     }
 }
+
+// MARK: - Actions
+
+extension BookCatalog {
+    
+    func add(book: Book) {
+        books.insert(book, at: 0)
+    }
+    
+    func remove(atOffsets offsets: IndexSet) {
+        books.remove(atOffsets: offsets)
+    }
+    
+    func move(fromOffsets offsets: IndexSet, toOffset offset: Int) {
+        books.move(fromOffsets: offsets, toOffset: offset)
+    }
+}

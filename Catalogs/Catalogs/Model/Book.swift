@@ -31,7 +31,7 @@ import Foundation
         "\ntitle: \(title), year: \(year), author: \(author)"
     }
     
-    init(id: UUID = UUID(), title: String, year: String, author: String, percentComplete: Double = 0.0) {
+    init(id: UUID = UUID(), title: String = "", year: String = "", author: String = "", percentComplete: Double = 0.0) {
         self.id = id
         self.title = title
         self.year = year

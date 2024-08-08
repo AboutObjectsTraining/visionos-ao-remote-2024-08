@@ -37,6 +37,8 @@
 		B473C72C2C63F8DC00426839 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473C72B2C63F8DC00426839 /* DataStore.swift */; };
 		B473C72E2C64034C00426839 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473C72D2C64034C00426839 /* Book.swift */; };
 		B473C7302C640B5500426839 /* BooksBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473C72F2C640B5500426839 /* BooksBrowser.swift */; };
+		B4D166F62C65065A00699376 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D166F52C65065A00699376 /* BookDetail.swift */; };
+		B4D166F82C65295F00699376 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D166F72C65295F00699376 /* AddBookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		B473C72B2C63F8DC00426839 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		B473C72D2C64034C00426839 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		B473C72F2C640B5500426839 /* BooksBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksBrowser.swift; sourceTree = "<group>"; };
+		B4D166F52C65065A00699376 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
+		B4D166F72C65295F00699376 /* AddBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				B42514BB2C63C834003A461A /* CatalogsApp.swift */,
 				B42514BD2C63C834003A461A /* ContentView.swift */,
 				B473C72F2C640B5500426839 /* BooksBrowser.swift */,
+				B4D166F52C65065A00699376 /* BookDetail.swift */,
+				B4D166F72C65295F00699376 /* AddBookView.swift */,
 				B473C71C2C63D72600426839 /* CatalogsViewModel.swift */,
 				B43D45D22C641E2200D70CB7 /* CompletionProgressViewStyle.swift */,
 				B42514C12C63C842003A461A /* Assets.xcassets */,
@@ -325,9 +331,11 @@
 				B42514BC2C63C834003A461A /* CatalogsApp.swift in Sources */,
 				B473C72E2C64034C00426839 /* Book.swift in Sources */,
 				B473C72A2C63F7D100426839 /* BookCatalog.swift in Sources */,
+				B4D166F62C65065A00699376 /* BookDetail.swift in Sources */,
 				B43D45D32C641E2300D70CB7 /* CompletionProgressViewStyle.swift in Sources */,
 				B473C72C2C63F8DC00426839 /* DataStore.swift in Sources */,
 				B473C71D2C63D72600426839 /* CatalogsViewModel.swift in Sources */,
+				B4D166F82C65295F00699376 /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
