@@ -40,7 +40,8 @@ struct ContentView: View {
                     }
             }
             .navigationTitle(
-                viewModel.selectedTab.rawValue
+                viewModel.navigationTitle
+                // viewModel.selectedTab.rawValue
             )
         }
     }

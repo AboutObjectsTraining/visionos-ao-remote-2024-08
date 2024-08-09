@@ -22,6 +22,7 @@ enum Tab: String {
     var selectedTab = Tab.books
     
     var isAddingBook = false
+    var isShowingImmersiveSpace = false
     
     var hasBooks: Bool {
         !bookCatalog.books.isEmpty
@@ -29,6 +30,19 @@ enum Tab: String {
     
     var hasObjects: Bool {
         !objectCatalog.objects.isEmpty
+    }
+    
+    var navigationTitle: String {
+        selectedTab == .settings ? selectedTab.rawValue :
+        selectedTab == .books ? bookCatalog.title : objectCatalog.title
+    }
+    
+    var booksCount: Int {
+        bookCatalog.books.count
+    }
+    
+    var objectsCount: Int {
+        objectCatalog.objects.count
     }
 }
 

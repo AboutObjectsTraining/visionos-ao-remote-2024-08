@@ -31,9 +31,13 @@ struct BooksBrowser: View {
             }
         }
         .toolbar {
-            EditButton()
-            Button(action: { viewModel.beginAddingBook() },
-                   label: { Image(systemName: "plus") })
+            if viewModel.selectedTab == .books {
+                EditButton()
+                Button(action: { viewModel.beginAddingBook() },
+                       label: { Image(systemName: "plus") })
+                Text("\(viewModel.booksCount) items")
+                    .font(.headline)
+            }
         }
         .sheet(isPresented: $viewModel.isAddingBook) {
             AddBookView(addBook: viewModel.addBook(_:),
@@ -63,36 +67,6 @@ struct BookCell: View {
                 .progressViewStyle(CompletionProgressViewStyle())
                 .padding(.trailing, 12)
         }
-    }
-}
-
-struct ThumbnailView: View {
-    let artworkURL: URL
-    let width: CGFloat
-    
-    var placeholder: some View {
-        ZStack {
-            Rectangle()
-                .fill(.regularMaterial)
-            Image(systemName: "photo")
-                .imageScale(.large)
-        }
-    }
-    
-    var body: some View {
-        AsyncImage(url: artworkURL) { phase in
-            if let image = phase.image {
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            } else if phase.error == nil {
-                ProgressView()
-            } else {
-                placeholder
-            }
-        }
-        .frame(width: width, height: 100)
-        .cornerRadius(5)
     }
 }
 

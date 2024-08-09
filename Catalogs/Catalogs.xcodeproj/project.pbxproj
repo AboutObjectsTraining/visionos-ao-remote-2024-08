@@ -58,7 +58,9 @@
 		B4D1671B2C656A3400699376 /* Watering Can.usdz in Resources */ = {isa = PBXBuildFile; fileRef = B4D167092C656A3400699376 /* Watering Can.usdz */; };
 		B4D1671D2C656AB400699376 /* SpatialObjectCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D1671C2C656AB400699376 /* SpatialObjectCatalog.swift */; };
 		B4D1671F2C656D9E00699376 /* SpatialObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D1671E2C656D9E00699376 /* SpatialObject.swift */; };
-		B4D167212C65712A00699376 /* SpatialObjectBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D167202C65712A00699376 /* SpatialObjectBrowser.swift */; };
+		B4D167212C65712A00699376 /* SpatialObjectsBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D167202C65712A00699376 /* SpatialObjectsBrowser.swift */; };
+		B4D167232C66578F00699376 /* SpatialObjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D167222C66578F00699376 /* SpatialObjectsView.swift */; };
+		B4D167252C6664D900699376 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D167242C6664D900699376 /* ThumbnailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,7 +128,9 @@
 		B4D167092C656A3400699376 /* Watering Can.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Watering Can.usdz"; sourceTree = "<group>"; };
 		B4D1671C2C656AB400699376 /* SpatialObjectCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialObjectCatalog.swift; sourceTree = "<group>"; };
 		B4D1671E2C656D9E00699376 /* SpatialObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialObject.swift; sourceTree = "<group>"; };
-		B4D167202C65712A00699376 /* SpatialObjectBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialObjectBrowser.swift; sourceTree = "<group>"; };
+		B4D167202C65712A00699376 /* SpatialObjectsBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialObjectsBrowser.swift; sourceTree = "<group>"; };
+		B4D167222C66578F00699376 /* SpatialObjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialObjectsView.swift; sourceTree = "<group>"; };
+		B4D167242C6664D900699376 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,12 +176,14 @@
 			children = (
 				B473C7242C63F67C00426839 /* Model */,
 				B42514BB2C63C834003A461A /* CatalogsApp.swift */,
+				B4D167222C66578F00699376 /* SpatialObjectsView.swift */,
+				B473C71C2C63D72600426839 /* CatalogsViewModel.swift */,
 				B42514BD2C63C834003A461A /* ContentView.swift */,
 				B473C72F2C640B5500426839 /* BooksBrowser.swift */,
-				B4D167202C65712A00699376 /* SpatialObjectBrowser.swift */,
+				B4D167202C65712A00699376 /* SpatialObjectsBrowser.swift */,
+				B4D167242C6664D900699376 /* ThumbnailView.swift */,
 				B4D166F52C65065A00699376 /* BookDetail.swift */,
 				B4D166F72C65295F00699376 /* AddBookView.swift */,
-				B473C71C2C63D72600426839 /* CatalogsViewModel.swift */,
 				B43D45D22C641E2200D70CB7 /* CompletionProgressViewStyle.swift */,
 				B42514C12C63C842003A461A /* Assets.xcassets */,
 				B42514C62C63C842003A461A /* Info.plist */,
@@ -413,6 +419,7 @@
 			files = (
 				B473C7302C640B5500426839 /* BooksBrowser.swift in Sources */,
 				B42514BE2C63C834003A461A /* ContentView.swift in Sources */,
+				B4D167232C66578F00699376 /* SpatialObjectsView.swift in Sources */,
 				B4D1671D2C656AB400699376 /* SpatialObjectCatalog.swift in Sources */,
 				B42514BC2C63C834003A461A /* CatalogsApp.swift in Sources */,
 				B473C72E2C64034C00426839 /* Book.swift in Sources */,
@@ -421,7 +428,8 @@
 				B4D1671F2C656D9E00699376 /* SpatialObject.swift in Sources */,
 				B43D45D32C641E2300D70CB7 /* CompletionProgressViewStyle.swift in Sources */,
 				B473C72C2C63F8DC00426839 /* DataStore.swift in Sources */,
-				B4D167212C65712A00699376 /* SpatialObjectBrowser.swift in Sources */,
+				B4D167212C65712A00699376 /* SpatialObjectsBrowser.swift in Sources */,
+				B4D167252C6664D900699376 /* ThumbnailView.swift in Sources */,
 				B473C71D2C63D72600426839 /* CatalogsViewModel.swift in Sources */,
 				B4D166F82C65295F00699376 /* AddBookView.swift in Sources */,
 			);

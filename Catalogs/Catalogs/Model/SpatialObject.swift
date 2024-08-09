@@ -18,4 +18,10 @@ import Foundation
     var description: String {
         "\ntitle: \(title)"
     }
+    
+    var artworkURL: URL {
+        let title = title.isEmpty ? "unknown" : title
+        let path = Bundle.main.path(forResource: title, ofType: "png")
+        return URL(fileURLWithPath: path ?? "")
+    }
 }
