@@ -13,8 +13,11 @@ enum Tab: String {
 
 @Observable final class CatalogsViewModel {
     
-    private let bookCatalogDataStore = DataStore()
+    private let bookCatalogDataStore = DataStore(storeName: "BookCatalog")
     private(set) var bookCatalog = BookCatalog(title: "Empty", books: [])
+    
+    private let objectsDataStore = DataStore(storeName: "ObjectCatalog")
+    private(set) var objectCatalog = SpatialObjectCatalog(title: "Empty", objects: [])
     
     var selectedTab = Tab.books
     
@@ -23,9 +26,26 @@ enum Tab: String {
     var hasBooks: Bool {
         !bookCatalog.books.isEmpty
     }
+    
+    var hasObjects: Bool {
+        !objectCatalog.objects.isEmpty
+    }
 }
 
-// MARK: Actions
+// MARK: Object Catalog Actions
+extension CatalogsViewModel {
+    func loadObjects() {
+        Task {
+            do {
+                objectCatalog = try await objectsDataStore.fetchSpatialObjectCatalog()
+            } catch {
+                print("Unable to fetch \(SpatialObjectCatalog.self) from \(objectsDataStore) due to \(error)")
+            }
+        }
+    }
+}
+
+// MARK: Book Catalog Actions
 extension CatalogsViewModel {
     
     func beginAddingBook() {
@@ -56,7 +76,7 @@ extension CatalogsViewModel {
         do {
             bookCatalog = try await bookCatalogDataStore.fetchBookCatalog()
         } catch {
-            print("Unable to fetch BookCatalog from \(bookCatalogDataStore) due to \(error)")
+            print("Unable to fetch \(BookCatalog.self) from \(bookCatalogDataStore) due to \(error)")
         }
     }
 }

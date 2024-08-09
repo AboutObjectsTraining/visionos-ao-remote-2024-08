@@ -42,4 +42,9 @@ extension DataStore {
         let (data, _) = try await URLSession.shared.data(from: storeFileURL)
         return try JSONDecoder().decode(BookCatalog.self, from: data)
     }
+    
+    func fetchSpatialObjectCatalog() async throws -> SpatialObjectCatalog {
+        let (data, _) = try await URLSession.shared.data(from: storeFileURL)
+        return try JSONDecoder().decode(SpatialObjectCatalog.self, from: data)
+    }
 }

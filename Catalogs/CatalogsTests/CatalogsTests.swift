@@ -13,4 +13,10 @@ class CatalogsTests: XCTestCase {
         let bookCatalog = try await store.fetchBookCatalog()
         print(bookCatalog)
     }
+    
+    func testFetchSpatialObjectsCatalog() async throws {
+        let store = DataStore(storeName: "ObjectCatalog")
+        let objectCatalog = try await store.fetchSpatialObjectCatalog()
+        print(objectCatalog)
+    }
 }

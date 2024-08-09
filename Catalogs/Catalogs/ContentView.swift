@@ -23,10 +23,15 @@ struct ContentView: View {
                             }
                         }
                     }
-                SpatialObjectsBrowser()
+                SpatialObjectsBrowser(viewModel: viewModel)
                     .tag(Tab.objects)
                     .tabItem {
                         Label(Tab.objects.rawValue, systemImage: "rotate.3d.fill")
+                    }
+                    .onAppear {
+                        if !viewModel.hasObjects {
+                            viewModel.loadObjects()
+                        }
                     }
                 SettingsBrowser()
                     .tag(Tab.settings)
@@ -52,13 +57,6 @@ struct EmptyContentMessage: View {
             Text(message)
                 .font(.subheadline)
         }
-    }
-}
-
-struct SpatialObjectsBrowser: View {
-    
-    var body: some View {
-        EmptyContentMessage(title: "No 3D models.", message: "Tap the + button to add a 3D model.")
     }
 }
 
