@@ -24,4 +24,8 @@ struct CatalogsApp: App {
             SpatialObjectsView(viewModel: viewModel)
         }
     }
+    
+    init() {
+        UITextField.appearance().clearButtonMode = .whileEditing
+    }
 }

@@ -14,6 +14,7 @@ struct SpatialObjectCell: View {
                 ThumbnailView(artworkURL: object.artworkURL, width: 100)
                 Spacer()
                 Text(object.title)
+                    .font(.title2)
             }
             .padding()
             .padding(.horizontal, 12)

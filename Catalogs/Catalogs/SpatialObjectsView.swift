@@ -28,6 +28,9 @@ struct SpatialObjectsView: View {
             ProgressView()
         }
         .gesture(dragGesture)
+        .simultaneousGesture(rotateGesture)
+        .simultaneousGesture(doubleTapGesture)
+        .simultaneousGesture(tripleTapGesture)
     }
     
     private func loadSelectedObject() -> Entity? {
@@ -44,12 +47,76 @@ struct SpatialObjectsView: View {
         entity.generateCollisionShapes(recursive: true)
         entity.components.set(InputTargetComponent())
         
+        if !entity.availableAnimations.isEmpty {
+            entity.components.set(MyAnimationComponent())
+        }
+        
         return entity
+    }
+}
+
+// MARK: Animation Support
+
+struct MyAnimationComponent: Component {
+    var isAnimating = false
+}
+
+extension Entity {
+    
+    var isAnimating: Bool {
+        components[MyAnimationComponent.self]?.isAnimating ?? false
+    }
+    
+    func toggleAnimation() {
+        guard let animation = availableAnimations.first else { return }
+        
+        if isAnimating {
+            stopAllAnimations()
+        } else {
+            playAnimation(animation.repeat(count: 0), transitionDuration: 1, startsPaused: false)
+        }
+        
+        components[MyAnimationComponent.self] = MyAnimationComponent(isAnimating: !isAnimating)
     }
 }
 
 // MARK: Gesture Support
 extension SpatialObjectsView {
+    
+    var doubleTapGesture: some Gesture {
+        TapGesture(count: 2)
+            .targetedToAnyEntity()
+            .onEnded { value in
+                value.entity.toggleAnimation()
+            }
+    }
+    
+    var tripleTapGesture: some Gesture {
+        TapGesture(count: 3)
+            .targetedToAnyEntity()
+            .onEnded { value in
+                value.entity.removeFromParent()
+            }
+    }
+    
+    var rotateGesture: some Gesture {
+        RotateGesture3D(constrainedToAxis: .y)
+            .targetedToAnyEntity()
+            .onChanged { value in
+                let entity = value.entity
+                if (baseTransform == nil) {
+                    baseTransform = entity.transform
+                }
+                
+                if let baseTransform = baseTransform {
+                    let transform = Transform(AffineTransform3D(rotation: value.rotation))
+                    entity.transform.rotation = baseTransform.rotation * transform.rotation
+                }
+            }
+            .onEnded { _ in
+                baseTransform = nil
+            }
+    }
     
     var dragGesture: some Gesture {
         DragGesture()
