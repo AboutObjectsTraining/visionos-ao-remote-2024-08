@@ -20,6 +20,7 @@ enum Tab: String {
     private(set) var objectCatalog = SpatialObjectCatalog(title: "Empty", objects: [])
     
     var selectedTab = Tab.books
+    var selectedObject: SpatialObject?
     
     var isAddingBook = false
     var isShowingImmersiveSpace = false

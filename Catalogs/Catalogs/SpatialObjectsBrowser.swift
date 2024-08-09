@@ -23,6 +23,30 @@ struct SpatialObjectCell: View {
     }
 }
 
+// MARK: - Actions
+extension SpatialObjectsBrowser {
+    
+    @MainActor private func dismiss() {
+        if viewModel.isShowingImmersiveSpace {
+            viewModel.isShowingImmersiveSpace = false
+            Task {
+                await dismissImmersiveSpace()
+            }
+        }
+    }
+
+    private func show(object: SpatialObject) {
+        viewModel.selectedObject = object
+        
+        if !viewModel.isShowingImmersiveSpace {
+            viewModel.isShowingImmersiveSpace = true
+            Task {
+                await openImmersiveSpace(id: CatalogsApp.spatialObjects)
+            }
+        }
+    }
+}
+
 struct SpatialObjectsBrowser: View {
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
@@ -37,6 +61,9 @@ struct SpatialObjectsBrowser: View {
                 List {
                     ForEach(viewModel.objectCatalog.objects) { object in
                         SpatialObjectCell(object: object)
+                            .onTapGesture {
+                                show(object: object)
+                            }
                     }
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 }
@@ -44,29 +71,17 @@ struct SpatialObjectsBrowser: View {
         }
         .toolbar {
             if viewModel.selectedTab == .objects {
-                ToolbarItemGroup(placement: .navigation) {
+                ToolbarItemGroup(placement: .topBarTrailing) {
                     EditButton()
                     Text("\(viewModel.objectsCount) items")
                         .font(.headline)
                 }
                 ToolbarItemGroup(placement: .bottomBar) {
-                    Button(action: toggleImmersiveSpace) {
-                        Text("Immersive Space")
+                    Button(action: dismiss) {
+                        Text("Dismiss Immersive Space")
                     }
                     .buttonStyle(.bordered)
                 }
-            }
-        }
-    }
-    
-    @MainActor private func toggleImmersiveSpace() {
-        Task {
-            if viewModel.isShowingImmersiveSpace {
-                viewModel.isShowingImmersiveSpace = false
-                await dismissImmersiveSpace()
-            } else {
-                viewModel.isShowingImmersiveSpace = true
-                await openImmersiveSpace(id: CatalogsApp.spatialObjects)
             }
         }
     }
